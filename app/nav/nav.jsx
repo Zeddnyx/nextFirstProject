@@ -1,10 +1,14 @@
-export default function nav() {
-  return <nav>
-    <h1><a href="#">Logo</a></h1>
+import Link from 'next/link'
 
-    <ul>
-      <li><a href="/about/page">About</a></li>
-      <li><a href="/auth/login">Join Now!</a></li>
+export default function nav() {
+  return <nav className={navParent}>
+    <h1><Link href="/">Logo</Link></h1>
+
+    <ul className={ulList}>
+      <li><Link href="/about/page">About</Link></li>
+      <li><Link href="/page">Popular</Link></li>
     </ul>
   </nav>
 }
+const navParent = 'flex justify-around w-full py-2 bg-gray-700 fixed top-0'
+const ulList = 'flex gap-5'

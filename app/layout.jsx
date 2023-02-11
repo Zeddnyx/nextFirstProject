@@ -1,12 +1,12 @@
 import './globals.css'
 import Nav from './nav/nav'
-import { Montserrat } from '@next/font/google'
-
-const mont = Montserrat({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  variable: '--font-mont',
-})
+// import { Montserrat } from '@next/font/google'
+//
+// const mont = Montserrat({
+//   weight: ['400', '700'],
+//   subsets: ['latin'],
+//   variable: '--font-mont',
+// })
 
 export default function RootLayout({ children }) {
   return (
