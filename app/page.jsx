@@ -3,6 +3,9 @@ import Movie from './Movie'
 export default async function Home() {
 
   const movie = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`)
+  if(!movie.ok) {
+    return console.log('error failed to fetch')
+  }
   const resp  = await movie.json()
   const results = resp.results
 
@@ -11,7 +14,7 @@ export default async function Home() {
       <div className={divMovie}>
         {results.map(movie => {
           return <Movie
-            key={movie.key}
+            key={movie.id}
             id={movie.id}
             img={movie.poster_path}
             title={movie.title}

@@ -5,7 +5,7 @@ export default function movieCard({ title, id, release, img, rate}) {
   const imagePath = 'https://image.tmdb.org/t/p/original'
 
   return <section className={parent}>
-    <Image src={imagePath + img} width={800} height={800} alt={title} />
+    <Image src={imagePath + img} width={500} height={500} alt={title} />
 
     <Link href={`${id}`}>
       <h1 className={h1Title}>{title}</h1>

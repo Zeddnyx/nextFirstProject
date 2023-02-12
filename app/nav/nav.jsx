@@ -5,8 +5,8 @@ export default function nav() {
     <h1><Link href="/">Logo</Link></h1>
 
     <ul className={ulList}>
+      <li><Link href="/search">Find</Link></li>
       <li><Link href="/about/page">About</Link></li>
-      <li><Link href="/page">Popular</Link></li>
     </ul>
   </nav>
 }
